@@ -10,7 +10,6 @@ document.getElementById("addItem").addEventListener("click", () => {
         <td><input type="number" id="taxRate${itemCount}" min="0" step="0.01"></td>
         <td>₹<span id="total${itemCount}">0.00</span></td>
         <td>
-            <button type="button" onclick="editItem(${itemCount})">Edit</button>
             <button type="button" onclick="deleteItem(${itemCount})">Delete</button>
         </td>
     `;
@@ -46,10 +45,6 @@ function updateItemsTable() {
     document.getElementById('subtotal').innerText = subtotal.toFixed(2);
     document.getElementById('tax').innerText = tax.toFixed(2);
     document.getElementById('total').innerText = total.toFixed(2);
-}
-
-function editItem(index) {
-    // Functionality to edit item can be implemented here if needed
 }
 
 function deleteItem(index) {

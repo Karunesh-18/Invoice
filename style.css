@@ -67,3 +67,12 @@ button:hover {
     width: 90%; /* Reduce input width to prevent overlap */
     text-align: center;
 }
+
+@media print {
+    .no-print {
+        display: none;
+    }
+    body {
+        background-color: #fff;
+    }
+}
