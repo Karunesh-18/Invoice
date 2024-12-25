@@ -1,0 +1,28 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+h2, h4, h5 {
+    margin-bottom: 10px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.text-end button {
+    margin-left: 10px;
+}
+
+.header, .footer {
+    background-color: #343a40; /* Dark gray */
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice Generator</h1>
+        <form id="invoiceForm" action="invoice.html" method="post" onsubmit="submitDetails(event)">
+            <h2>Customer Details</h2>
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+            
+            <label for="customerAddress">Customer Address:</label>
+            <input type="text" id="customerAddress" name="customerAddress" required>
+            
+            <h2>Item Details</h2>
+            <button type="button" id="addItem">Add Item</button>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Tax Rate</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="itemsTableBody">
+                    <!-- Items will be added here -->
+                </tbody>
+            </table>
+            <button type="submit">Generate Invoice</button>
+        </form>
+
+        <h2>Invoice Preview</h2>
+        <div id="invoicePreview">
+            <p>Subtotal: ₹<span id="subtotal">0.00</span></p>
+            <p>Tax: ₹<span id="tax">0.00</span></p>
+            <p><strong>Total: ₹<span id="total">0.00</span></strong></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
